@@ -1,0 +1,33 @@
+<!-- Manny Campbell, Nathan Gray, Manny Lee, Philip Vishnevsky, Natalie Tepedino -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Registration form info -->
+<h1 class="lpad">Registration</h1>
+<p class="lpad">Register for your desired student organization below.</p>
+<form method="post">
+    <!-- User input field -->
+    <div class="lpad">
+        <label for="name" class="label">Student's Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <!-- Menu showing available organizations -->
+    <div class="lpad">
+        <label for="organization" class="label">Organization:</label>
+        <select class="select" id="organization" name="organization" required>
+            <option value="" disabled selected>Choose an organization</option>
+            {% for org in orgs %}
+                <!-- Loops through organizations and adds them to the dropdown menu -->
+                <option value="{{ org }}">{{ org }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <!-- Submission button after selection -->
+    <button type="submit" class="bttn">Register</button>
+</form>
+<!-- Error message, if necessary -->
+{% if error %}
+<div>{{ error }}</div>
+{% endif %}
+{% endblock %}

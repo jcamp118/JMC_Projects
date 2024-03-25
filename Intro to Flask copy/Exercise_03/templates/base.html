@@ -1,0 +1,115 @@
+<!-- Manny Campbell, Nathan Gray, Manny Lee, Philip Vishnevsky, Natalie Tepedino -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Organization Registration</title>
+    <!-- Styling the pages. -->
+    <style>
+    body {
+        font-family: Helvetica, sans-serif;
+        line-height: 1.5;
+        background: linear-gradient(red, orange, yellow);
+        color: white;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    nav {
+        text-align: left;
+        background-color: black;
+        height: 80px;
+        line-height:45px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        display: inline-block;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li a:hover {
+    color: orangered;
+    }
+
+    h1 {
+        text-align: left;
+        padding-top: 20px;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    .lpad {
+        padding-left: 150px;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    table, th, td {
+        border-bottom: 1px solid black;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 10px;
+    }
+
+    th {
+        border-bottom-width: medium;
+    }
+
+    button {
+        margin-left: 150px;
+        padding: 5px 10px;
+    }
+
+    .label {
+        font-weight: bold;
+    }
+    </style>
+</head>
+<header>
+    <!-- Navigation bar -->
+    <nav>
+        <div>
+            <div>
+                <!-- Navigation -->
+                <ul>
+                    <li>
+                        <a href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('register') }}">Registered Students</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+    <!-- Main content -->
+    <div>
+        <!-- Placeholder for inheritance -->
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

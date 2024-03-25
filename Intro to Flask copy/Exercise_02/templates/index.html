@@ -1,0 +1,33 @@
+<!-- Manny Campbell, Nathan Gray, Manny Lee, Philip Vishnevsky, Natalie Tepedino --> 
+
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+    body {
+        font-family: Helvetica, sans-serif;
+        line-height: 1.5;
+        background: linear-gradient(red, orange, yellow);
+        color: white;
+        min-height: 100vh;
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    p {
+        text-align: center;
+    }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <title>{% block title %}{% endblock %} - Calculator</title>
+    {% endblock %}
+</head>
+<body>
+    <div id="content">{% block content %}{% endblock %}</div>
+</body>
+</html>

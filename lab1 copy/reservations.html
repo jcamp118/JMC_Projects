@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niner Coffee House</title>
+    <meta name="author" content="Manny Campbell">
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Niner Coffee House</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img src="images/shop.jpg" alt="Niner Coffee House Interior" width="400" height="533">
+        <h2>Make a Reservation!</h2>
+        <form action="#">
+            <input required type="text" name="Name" id="Name" placeholder="Name"><br>
+            <input required type="email" name="Email" id="Email" placeholder="Email"><br>
+            <input required type="tel" name="Phone" id="Phone" placeholder="Phone number"><br>
+            <input required type="number" name="Number" id="Number" placeholder="Number of guests in your party" min="1" max="20"><br>
+            <input required type="datetime-local" id="DateTime" name="Date and Time" min="2024-01-16T00:00"><br>
+            <textarea id="Special" name="Special Requests" placeholder="Special Requests"></textarea><br>
+            <input type="submit" id="Reserve" name="Reserve" value="Reserve">
+        </form>
+    </main>
+    <footer style="font-size: smaller;">
+        <p>©2022 Niner Coffee House. All rights reserved</p>
+    </footer>
+    
+
+</body>
+</html>
